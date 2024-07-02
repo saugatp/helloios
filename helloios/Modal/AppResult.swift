@@ -6,9 +6,13 @@
 //
 
 import Foundation
-struct AppResult: Hashable, Codable, Identifiable{
-    var id: String
-    var developer: String
-    var icon: String
+struct AppResult: Hashable, Codable{
+    var results: [Result]
+}
+
+struct Result: Hashable, Codable, Identifiable{
+    var id: Int
     var name: String
+    var image: String
+    var status: String
 }
